@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         loadView()
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(HabitTableViewCell.self, forCellReuseIdentifier:HabitTableViewCell.identifier)
 
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
@@ -120,13 +120,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         return habits.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HabitTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HabitTableViewCell.identifier, for: indexPath) as? HabitTableViewCell else{
+            return UITableViewCell()
+        }
         let habit = habits[indexPath.row]
-        cell.nameOfHabitLbl.text = habit.habit
+        cell.configure(text: habit.habit)
         //let cellColor = color[indexPath.row]
         //cell.habitView.backgroundColor = cellColor
         
-        cell.habitView.layer.cornerRadius = 15.0
+        //cell.habitView.layer.cornerRadius = 15.0
         
         return cell
     }

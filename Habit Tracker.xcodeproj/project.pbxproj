@@ -19,7 +19,6 @@
 		CE63929B280AF19600891278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE63929A280AF19600891278 /* Assets.xcassets */; };
 		CE63929E280AF19600891278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE63929C280AF19600891278 /* LaunchScreen.storyboard */; };
 		CE6392A6280AF93900891278 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6392A5280AF93900891278 /* HabitTableViewCell.swift */; };
-		CE780B5128132D6D00506C2E /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780B5028132D6D00506C2E /* AddHabitView.swift */; };
 		CE780B5328132E6A00506C2E /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780B5228132E6A00506C2E /* AddHabitViewController.swift */; };
 		CE780B552819A54D00506C2E /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = CE780B542819A54D00506C2E /* PodFile */; };
 		CE780B572819A65000506C2E /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780B562819A65000506C2E /* RealmServices.swift */; };
@@ -44,7 +43,6 @@
 		CE63929D280AF19600891278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE63929F280AF19600891278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6392A5280AF93900891278 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
-		CE780B5028132D6D00506C2E /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		CE780B5228132E6A00506C2E /* AddHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewController.swift; sourceTree = "<group>"; };
 		CE780B542819A54D00506C2E /* PodFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
 		CE780B562819A65000506C2E /* RealmServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServices.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				CE639295280AF19400891278 /* ViewController.swift */,
 				CE3AB46528A1390D006416A9 /* AuthViewController.swift */,
 				CE6392A5280AF93900891278 /* HabitTableViewCell.swift */,
-				CE780B5028132D6D00506C2E /* AddHabitView.swift */,
 				CE780B5228132E6A00506C2E /* AddHabitViewController.swift */,
 				CE3AB461289A945F006416A9 /* User.swift */,
 				CE639297280AF19400891278 /* Main.storyboard */,
@@ -249,7 +246,6 @@
 				CE3AB460289A8FA7006416A9 /* FirebaseModel.swift in Sources */,
 				CE639294280AF19400891278 /* SceneDelegate.swift in Sources */,
 				CE780B592819A6BB00506C2E /* RealmModel.swift in Sources */,
-				CE780B5128132D6D00506C2E /* AddHabitView.swift in Sources */,
 				CE3AB45E289A8B5F006416A9 /* FireBaseServices.swift in Sources */,
 				CE780B572819A65000506C2E /* RealmServices.swift in Sources */,
 				CE3AB462289A945F006416A9 /* User.swift in Sources */,
