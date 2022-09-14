@@ -17,17 +17,6 @@ class AddHabitViewController: UIViewController {
     var habitTxt: UITextField!
     var saveBTN: UIButton!
     var firebaseServices = FirebaseServices()
-    //@IBOutlet weak var addView: UIView!
-//    @IBOutlet weak var nameHabitLbl: UILabel!
-//    @IBOutlet weak var habitTxtFld: UITextField!
-//    //@IBOutlet weak var saveBtn: UIBarButtonItem!
-//    //@IBOutlet weak var CancelBtn: UIBarButtonItem!
-//    @IBOutlet weak var savaBtn: UIButton!
-    
-//    var realm = RealmService()
-    let ref = Database.database().reference(withPath: "habits")
-    let usersRef = Database.database().reference(withPath: "online")
-    
     var habits: [FirebaseModel] = []
     var user: User?
     var onlineUserCount = UIBarButtonItem()
@@ -35,6 +24,11 @@ class AddHabitViewController: UIViewController {
     //var handle: AuthStateDidChangeListenerHandle!
     var usersRefObservers: [DatabaseHandle] = []
     var handle: AuthStateDidChangeListenerHandle?
+    
+   
+    let ref = Database.database().reference(withPath: "habits")
+    let usersRef = Database.database().reference(withPath: "online")
+    
     
     
     
@@ -46,7 +40,8 @@ class AddHabitViewController: UIViewController {
             //let user = self.user
         else{return}
         print("hello2")
-        firebaseServices.saveHabit(habit: text)
+        firebaseServices.saveHabit(habit: text, progress: 0,isDone: false)
+        performSegue(withIdentifier: "showMain", sender: nil)
 //        let habitItem = FirebaseModel(habit: text, progres: false)
 //
 //        let habitItemRef = self.ref.child(text.lowercased())
@@ -66,20 +61,8 @@ class AddHabitViewController: UIViewController {
 //
 //    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        savaBtn.addTarget(self, action: #selector(addHabit(_:)), for: .touchUpInside)
-        // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -88,6 +71,7 @@ class AddHabitViewController: UIViewController {
           self.user = User(authData: user)
         }
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         guard let handle = handle else { return }
@@ -101,19 +85,19 @@ class AddHabitViewController: UIViewController {
         nameOfHabit = UILabel()
         nameOfHabit.translatesAutoresizingMaskIntoConstraints = false
         nameOfHabit.textAlignment = .center
-        nameOfHabit.backgroundColor = UIColor.lightGray
+        nameOfHabit.backgroundColor = .white
         nameOfHabit.layer.cornerRadius = 3
         nameOfHabit.text = "Name"
         nameOfHabit.numberOfLines = 0
         nameOfHabit.font = UIFont.systemFont(ofSize: 24)
-        nameOfHabit.textColor = .white
+        nameOfHabit.textColor = .systemPink
         view.addSubview(nameOfHabit)
 
         habitTxt = UITextField()
         habitTxt.translatesAutoresizingMaskIntoConstraints = false
         habitTxt.textAlignment = .center
         habitTxt.layer.cornerRadius = 5
-        habitTxt.backgroundColor = .lightGray
+        habitTxt.backgroundColor = .systemPink
         habitTxt.textColor = .white
         habitTxt.font = UIFont.systemFont(ofSize: 24)
         view.addSubview(habitTxt)
@@ -122,7 +106,7 @@ class AddHabitViewController: UIViewController {
         saveBTN.translatesAutoresizingMaskIntoConstraints = false
         saveBTN.setTitle("Save", for: .normal)
         saveBTN.layer.cornerRadius = 5
-        saveBTN.backgroundColor = UIColor.lightGray
+        saveBTN.backgroundColor = UIColor.systemPink
         saveBTN.addTarget(self, action: #selector(addHabit), for: .touchUpInside)
          view.addSubview(saveBTN)
 

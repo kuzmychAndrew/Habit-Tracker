@@ -12,62 +12,55 @@ import Firebase
 class ViewController: UIViewController {
     
     var tableView = UITableView()
-
-    let ref = Database.database().reference(withPath: "habits")
     var habits:[FirebaseModel] = []
-    //var color = [UIColor.blue, UIColor.yellow]
     var refObservers: [DatabaseHandle] = []
     var firebaseService = FirebaseServices()
-    //@IBOutlet weak var habitTableView: UITableView!
+    
+ 
+    let ref = Database.database().reference(withPath: "habits")
+    let hourToUpdate = Calendar.current.component(.hour, from: Date())
+    let date = Date()
+    let dateFormatter = DateFormatter()
+    
+    
+    //var progress = Progress(totalUnitCount: 21)
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        print(hourToUpdate)
+        if hourToUpdate == 11{
+            print("its 11")
+        }
         loadView()
+        
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.register(HabitTableViewCell.self, forCellReuseIdentifier:HabitTableViewCell.identifier)
-
+        
+        tableView.register(UINib.init(nibName: "NewTableViewCell", bundle: nil), forCellReuseIdentifier: "NewCellIdentifier")
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
-//        firebaseService.readHabit()
-
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-        //print(read)
-//        ref.observe(.value, with: {snapshot in
-//            print(snapshot.value as Any)
-//        })
-
-//        let completed = ref.observe(.value) { snapshot in
-//          // 2
-//          var newHabit: [FirebaseModel] = []
-//          // 3
-//          for child in snapshot.children {
-//            // 4
-//            if
-//              let snapshot = child as? DataSnapshot,
-//              let habits = FirebaseModel(snapshot: snapshot) {
-//              newHabit.append(habits)
-////            print (habits)
-//            }
-//          }
-//
-        firebaseService.readHabit{ (newHabits) in
-            print(newHabits)
-            self.habits = newHabits
-            self.tableView.reloadData()
+        DispatchQueue.global(qos: .background).async{
+            self.firebaseService.readHabit{ (newHabits) in
+                print(newHabits)
+                self.habits = newHabits
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }
         }
-//        print(newHabit)
-//        self.habits = newHabit
-            
-            //print(newHabit)
         
-        
-        //}
-        // 6
-        
+       
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         refObservers.forEach(ref.removeObserver(withHandle:))
         refObservers = []
@@ -90,53 +83,79 @@ class ViewController: UIViewController {
         self.tableView = tableView
 
         
-//        table = UITableView()
-//        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-//        //table.frame = CGRect(x: 10, y: 10, width: 100, height: 500)
-//        table.dataSource = self
-//        table.delegate = self
-//        table.frame = view.bounds
-//        view.addSubview(table)
-//
-//        NSLayoutConstraint.activate([
-//
-//            table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 10),
-//            table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -10.0),
-//            table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 10.0)
-//
-//        ])
-//
     }
-    
-
-
-
 }
+
+
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 71
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return habits.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: HabitTableViewCell.identifier, for: indexPath) as? HabitTableViewCell else{
-            return UITableViewCell()
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewCellIdentifier", for: indexPath) as! NewTableViewCell
         let habit = habits[indexPath.row]
-        cell.configure(text: habit.habit)
-        //let cellColor = color[indexPath.row]
-        //cell.habitView.backgroundColor = cellColor
+        let currentDate = dateFormatter.string(from: date)
         
-        //cell.habitView.layer.cornerRadius = 15.0
+        if currentDate == habit.date{
+            cell.checkMarkBtn.isSelected = habit.isDone
+        }else{
+            cell.checkMarkBtn.isSelected = false
+        }
+        
+        cell.progress.setProgress(Float(habit.progres), animated: false)
+        cell.nameOfHabitLBL.text = habit.habit
+        cell.selectionStyle = .none
+        
+        //cell.checkMarkBtn.addTarget(self, action: #selector(checkMarkClicked(sender: )), for: .touchUpInside)
+        
         
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let cell = tableView.cellForRow(at: indexPath) as! NewTableViewCell
+        let habit = habits[indexPath.row]
+        
+        var newProgress = habit.progres + 0.04761905
+        
+        if  habit.isDone != true && newProgress <= 1.0 {
+            DispatchQueue.global(qos: .background).async {
+                self.firebaseService.saveHabit(habit: habit.habit, progress: newProgress, isDone: true)
+            }
+            cell.checkMarkBtn.isSelected = true
+            
+        }else if newProgress >= 1.0{
+            let alert = UIAlertController(title: "Congratulation!!!! ", message: "Нou have acquired this habit", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            habit.ref?.removeValue()
+        }
+        
+        tableView.reloadData()
+        
+    }
+//    @objc func checkMarkClicked(sender: UIButton){
+//        print("Button pressed")
+//        if sender.isSelected{
+//            sender.isSelected = false
+//        }else{
+//            sender.isSelected = true
+//            firebaseService.saveHabit(habit: habit!.habit, progress: habit!.progres + 1)
+//        }
+    //tableView.reloadData()
+    //}
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
       if editingStyle == .delete {
         let habitItem = habits[indexPath.row]
         habitItem.ref?.removeValue()
       }
     }
+    
+    
+    
     
 }

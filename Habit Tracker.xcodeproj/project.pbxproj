@@ -21,8 +21,8 @@
 		CE6392A6280AF93900891278 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6392A5280AF93900891278 /* HabitTableViewCell.swift */; };
 		CE780B5328132E6A00506C2E /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780B5228132E6A00506C2E /* AddHabitViewController.swift */; };
 		CE780B552819A54D00506C2E /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = CE780B542819A54D00506C2E /* PodFile */; };
-		CE780B572819A65000506C2E /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780B562819A65000506C2E /* RealmServices.swift */; };
-		CE780B592819A6BB00506C2E /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780B582819A6BB00506C2E /* RealmModel.swift */; };
+		CE8B75F828D08C44003CFDDB /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B75F628D08C44003CFDDB /* NewTableViewCell.swift */; };
+		CE8B75F928D08C44003CFDDB /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */; };
 		CE94039D2862240B00CE1EE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE94039C2862240B00CE1EE0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +45,8 @@
 		CE6392A5280AF93900891278 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		CE780B5228132E6A00506C2E /* AddHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewController.swift; sourceTree = "<group>"; };
 		CE780B542819A54D00506C2E /* PodFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
-		CE780B562819A65000506C2E /* RealmServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServices.swift; sourceTree = "<group>"; };
-		CE780B582819A6BB00506C2E /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		CE8B75F628D08C44003CFDDB /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
+		CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
 		CE94039C2862240B00CE1EE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -82,6 +82,8 @@
 		CE639285280AF19400891278 = {
 			isa = PBXGroup;
 			children = (
+				CE8B75F628D08C44003CFDDB /* NewTableViewCell.swift */,
+				CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */,
 				CE639290280AF19400891278 /* Habit Tracker */,
 				CE63928F280AF19400891278 /* Products */,
 				58FDA2B2972942338A583C86 /* Pods */,
@@ -115,8 +117,6 @@
 				CE94039C2862240B00CE1EE0 /* GoogleService-Info.plist */,
 				CE3AB45D289A8B5F006416A9 /* FireBaseServices.swift */,
 				CE3AB45F289A8FA7006416A9 /* FirebaseModel.swift */,
-				CE780B562819A65000506C2E /* RealmServices.swift */,
-				CE780B582819A6BB00506C2E /* RealmModel.swift */,
 			);
 			path = "Habit Tracker";
 			sourceTree = "<group>";
@@ -183,6 +183,7 @@
 			files = (
 				CE63929E280AF19600891278 /* LaunchScreen.storyboard in Resources */,
 				CE63929B280AF19600891278 /* Assets.xcassets in Resources */,
+				CE8B75F928D08C44003CFDDB /* NewTableViewCell.xib in Resources */,
 				CE94039D2862240B00CE1EE0 /* GoogleService-Info.plist in Resources */,
 				CE780B552819A54D00506C2E /* PodFile in Resources */,
 				CE639299280AF19400891278 /* Main.storyboard in Resources */,
@@ -244,10 +245,9 @@
 				CE6392A6280AF93900891278 /* HabitTableViewCell.swift in Sources */,
 				CE3AB46628A1390D006416A9 /* AuthViewController.swift in Sources */,
 				CE3AB460289A8FA7006416A9 /* FirebaseModel.swift in Sources */,
+				CE8B75F828D08C44003CFDDB /* NewTableViewCell.swift in Sources */,
 				CE639294280AF19400891278 /* SceneDelegate.swift in Sources */,
-				CE780B592819A6BB00506C2E /* RealmModel.swift in Sources */,
 				CE3AB45E289A8B5F006416A9 /* FireBaseServices.swift in Sources */,
-				CE780B572819A65000506C2E /* RealmServices.swift in Sources */,
 				CE3AB462289A945F006416A9 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

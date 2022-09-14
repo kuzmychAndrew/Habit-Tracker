@@ -10,32 +10,41 @@ import UIKit
 class HabitTableViewCell: UITableViewCell {
     static let identifier = "CustomTableViewCell"
     
-    var nameOfHabit: UILabel = {
+    private let nameOfHabit: UILabel = {
         let nameOfhabit = UILabel()
         nameOfhabit.translatesAutoresizingMaskIntoConstraints = false
+        nameOfhabit.textColor = .white
         nameOfhabit.textAlignment = .left
-        nameOfhabit.backgroundColor = .white
-        nameOfhabit.layer.borderWidth = 1.0
-        nameOfhabit.layer.cornerRadius = 5
-        nameOfhabit.layer.borderColor = UIColor.lightGray.cgColor
+        
         return nameOfhabit
+    }()
+    private let checkBox: UIButton = {
+        let checkBox = UIButton()
+        checkBox.translatesAutoresizingMaskIntoConstraints = false
+        
+        return checkBox
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         //contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = .systemPink
+        contentView.layer.borderWidth = 1.0
+        contentView.layer.cornerRadius = 20.0
+        contentView.layer.borderColor = UIColor.lightGray.cgColor
         contentView.addSubview(nameOfHabit)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        nameOfHabit.frame = CGRect(x: 10.0, y: 5.0, width: contentView.frame.width-20, height: 100)
+        nameOfHabit.frame = CGRect(x: 10.0, y: 5.0, width: contentView.frame.width-100, height: 60)
     }
-    func configure(text: String){
+    
+    public func configure(text: String){
         nameOfHabit.text = text
     }
 }

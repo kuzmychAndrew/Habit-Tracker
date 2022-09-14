@@ -15,8 +15,8 @@ class AuthViewController: UIViewController {
     var passwordTxtFld: UITextField!
     var loginBtn: UIButton!
     var signUpBtn: UIButton!
-    
     var handle: AuthStateDidChangeListenerHandle?
+    
     let LoginToHabits = "LoginToHabits"
 
     override func viewDidLoad() {
@@ -61,7 +61,6 @@ class AuthViewController: UIViewController {
             print("Error in createUser: \(error?.localizedDescription ?? "")")
           }
         }
-
     }
     
     @objc func loginDidTouch(sender: UIButton){
@@ -97,9 +96,7 @@ class AuthViewController: UIViewController {
         emailTxtFld.layer.borderColor = UIColor.lightGray .cgColor
         emailTxtFld.layer.borderWidth = 1
         //emailTxtFld.backgroundColor = .blue
-        emailTxtFld.font = UIFont.systemFont(ofSize: 24)
-        emailTxtFld.placeholder = "Email"
-        view.addSubview(emailTxtFld)
+                view.addSubview(emailTxtFld)
         
         passwordTxtFld = UITextField()
         passwordTxtFld.translatesAutoresizingMaskIntoConstraints = false
@@ -153,8 +150,5 @@ class AuthViewController: UIViewController {
             signUpBtn.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100.0)
             
         ])
-        
-        
     }
-
 }

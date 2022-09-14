@@ -12,8 +12,13 @@ class FirebaseServices{
     var refObserver: [DatabaseHandle] = []
     var habits: [FirebaseModel] = []
     
-    func saveHabit(habit: String){
-        let habitItem = FirebaseModel(habit: habit, progres: false)
+    func saveHabit(habit: String, progress: Float, isDone: Bool){
+        let date = Date()
+        let dataFormater = DateFormatter()
+        dataFormater.dateFormat = "dd/MM/yyyy"
+        let currentDate = dataFormater.string(from: date)
+        
+        let habitItem = FirebaseModel(habit: habit, progres: progress, date: currentDate, isDone: isDone)
         
         let habitItemRef = self.ref.child(habit.lowercased())
         habitItemRef.setValue(habitItem.toAnyObject())
