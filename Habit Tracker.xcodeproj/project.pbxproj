@@ -8,46 +8,62 @@
 
 /* Begin PBXBuildFile section */
 		2FBB1967C2FBA09DEDB0B56D /* Pods_Habit_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDE3D0BBA0DE37772437ED2 /* Pods_Habit_Tracker.framework */; };
-		CE3AB45E289A8B5F006416A9 /* FireBaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AB45D289A8B5F006416A9 /* FireBaseServices.swift */; };
-		CE3AB460289A8FA7006416A9 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AB45F289A8FA7006416A9 /* FirebaseModel.swift */; };
-		CE3AB462289A945F006416A9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AB461289A945F006416A9 /* User.swift */; };
-		CE3AB46628A1390D006416A9 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AB46528A1390D006416A9 /* AuthViewController.swift */; };
 		CE639292280AF19400891278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE639291280AF19400891278 /* AppDelegate.swift */; };
 		CE639294280AF19400891278 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE639293280AF19400891278 /* SceneDelegate.swift */; };
-		CE639296280AF19400891278 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE639295280AF19400891278 /* ViewController.swift */; };
 		CE639299280AF19400891278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE639297280AF19400891278 /* Main.storyboard */; };
 		CE63929B280AF19600891278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE63929A280AF19600891278 /* Assets.xcassets */; };
 		CE63929E280AF19600891278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE63929C280AF19600891278 /* LaunchScreen.storyboard */; };
 		CE6392A6280AF93900891278 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6392A5280AF93900891278 /* HabitTableViewCell.swift */; };
-		CE780B5328132E6A00506C2E /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780B5228132E6A00506C2E /* AddHabitViewController.swift */; };
 		CE780B552819A54D00506C2E /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = CE780B542819A54D00506C2E /* PodFile */; };
-		CE8B75F828D08C44003CFDDB /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B75F628D08C44003CFDDB /* NewTableViewCell.swift */; };
 		CE8B75F928D08C44003CFDDB /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */; };
 		CE94039D2862240B00CE1EE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE94039C2862240B00CE1EE0 /* GoogleService-Info.plist */; };
+		CE986E4F28F565180099D7D2 /* FirebaseAuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3228F565170099D7D2 /* FirebaseAuthServices.swift */; };
+		CE986E5028F565180099D7D2 /* FireBaseDatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3328F565170099D7D2 /* FireBaseDatabaseServices.swift */; };
+		CE986E5128F565180099D7D2 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3528F565170099D7D2 /* ViewBuilder.swift */; };
+		CE986E5228F565180099D7D2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3828F565170099D7D2 /* AuthViewModel.swift */; };
+		CE986E5328F565180099D7D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3A28F565170099D7D2 /* User.swift */; };
+		CE986E5428F565180099D7D2 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3C28F565170099D7D2 /* AuthViewController.swift */; };
+		CE986E5528F565180099D7D2 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3D28F565170099D7D2 /* AuthView.swift */; };
+		CE986E5628F565180099D7D2 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E4028F565170099D7D2 /* AddViewModel.swift */; };
+		CE986E5728F565180099D7D2 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E4328F565170099D7D2 /* AddView.swift */; };
+		CE986E5828F565180099D7D2 /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E4428F565170099D7D2 /* AddHabitViewController.swift */; };
+		CE986E5928F565180099D7D2 /* HabitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E4728F565180099D7D2 /* HabitListViewModel.swift */; };
+		CE986E5A28F565180099D7D2 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E4928F565180099D7D2 /* FirebaseModel.swift */; };
+		CE986E5B28F565180099D7D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E4B28F565180099D7D2 /* ViewController.swift */; };
+		CE986E5C28F565180099D7D2 /* HabitListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E4D28F565180099D7D2 /* HabitListExtension.swift */; };
+		CE986E5F28F56AAB0099D7D2 /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E5E28F56AAB0099D7D2 /* HabitListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7CDE3D0BBA0DE37772437ED2 /* Pods_Habit_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habit_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3132AFAF835D8CE46BD9FD0 /* Pods-Habit Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habit Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Habit Tracker/Pods-Habit Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		B3A420504080345B414F3855 /* Pods-Habit Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habit Tracker.release.xcconfig"; path = "Target Support Files/Pods-Habit Tracker/Pods-Habit Tracker.release.xcconfig"; sourceTree = "<group>"; };
-		CE3AB45D289A8B5F006416A9 /* FireBaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseServices.swift; sourceTree = "<group>"; };
-		CE3AB45F289A8FA7006416A9 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
-		CE3AB461289A945F006416A9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CE3AB46528A1390D006416A9 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		CE63928E280AF19400891278 /* Habit Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE639291280AF19400891278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE639293280AF19400891278 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE639295280AF19400891278 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE639298280AF19400891278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE63929A280AF19600891278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE63929D280AF19600891278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE63929F280AF19600891278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6392A5280AF93900891278 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
-		CE780B5228132E6A00506C2E /* AddHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewController.swift; sourceTree = "<group>"; };
 		CE780B542819A54D00506C2E /* PodFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
-		CE8B75F628D08C44003CFDDB /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
 		CE94039C2862240B00CE1EE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CE986E3228F565170099D7D2 /* FirebaseAuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthServices.swift; sourceTree = "<group>"; };
+		CE986E3328F565170099D7D2 /* FireBaseDatabaseServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseDatabaseServices.swift; sourceTree = "<group>"; };
+		CE986E3528F565170099D7D2 /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+		CE986E3828F565170099D7D2 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CE986E3A28F565170099D7D2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE986E3C28F565170099D7D2 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		CE986E3D28F565170099D7D2 /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		CE986E4028F565170099D7D2 /* AddViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		CE986E4328F565170099D7D2 /* AddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		CE986E4428F565170099D7D2 /* AddHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHabitViewController.swift; sourceTree = "<group>"; };
+		CE986E4728F565180099D7D2 /* HabitListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitListViewModel.swift; sourceTree = "<group>"; };
+		CE986E4928F565180099D7D2 /* FirebaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
+		CE986E4B28F565180099D7D2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE986E4D28F565180099D7D2 /* HabitListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitListExtension.swift; sourceTree = "<group>"; };
+		CE986E5E28F56AAB0099D7D2 /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +98,6 @@
 		CE639285280AF19400891278 = {
 			isa = PBXGroup;
 			children = (
-				CE8B75F628D08C44003CFDDB /* NewTableViewCell.swift */,
-				CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */,
 				CE639290280AF19400891278 /* Habit Tracker */,
 				CE63928F280AF19400891278 /* Products */,
 				58FDA2B2972942338A583C86 /* Pods */,
@@ -104,21 +118,151 @@
 			children = (
 				CE639291280AF19400891278 /* AppDelegate.swift */,
 				CE639293280AF19400891278 /* SceneDelegate.swift */,
-				CE639295280AF19400891278 /* ViewController.swift */,
-				CE3AB46528A1390D006416A9 /* AuthViewController.swift */,
-				CE6392A5280AF93900891278 /* HabitTableViewCell.swift */,
-				CE780B5228132E6A00506C2E /* AddHabitViewController.swift */,
-				CE3AB461289A945F006416A9 /* User.swift */,
+				CE986E3E28F565170099D7D2 /* AddHabit */,
+				CE986E3628F565170099D7D2 /* Authentication */,
+				CE986E3428F565170099D7D2 /* Builder */,
+				CE986E4528F565180099D7D2 /* HabitList */,
+				CE986E3128F565170099D7D2 /* Services */,
 				CE639297280AF19400891278 /* Main.storyboard */,
 				CE780B542819A54D00506C2E /* PodFile */,
 				CE63929A280AF19600891278 /* Assets.xcassets */,
 				CE63929C280AF19600891278 /* LaunchScreen.storyboard */,
 				CE63929F280AF19600891278 /* Info.plist */,
 				CE94039C2862240B00CE1EE0 /* GoogleService-Info.plist */,
-				CE3AB45D289A8B5F006416A9 /* FireBaseServices.swift */,
-				CE3AB45F289A8FA7006416A9 /* FirebaseModel.swift */,
 			);
 			path = "Habit Tracker";
+			sourceTree = "<group>";
+		};
+		CE986E3128F565170099D7D2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E3228F565170099D7D2 /* FirebaseAuthServices.swift */,
+				CE986E3328F565170099D7D2 /* FireBaseDatabaseServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE986E3428F565170099D7D2 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E3528F565170099D7D2 /* ViewBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		CE986E3628F565170099D7D2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E3728F565170099D7D2 /* ViewModel */,
+				CE986E3928F565170099D7D2 /* Model */,
+				CE986E3B28F565170099D7D2 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CE986E3728F565170099D7D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E3828F565170099D7D2 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE986E3928F565170099D7D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E3A28F565170099D7D2 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE986E3B28F565170099D7D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E3C28F565170099D7D2 /* AuthViewController.swift */,
+				CE986E3D28F565170099D7D2 /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE986E3E28F565170099D7D2 /* AddHabit */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E3F28F565170099D7D2 /* ViewModel */,
+				CE986E4128F565170099D7D2 /* Model */,
+				CE986E4228F565170099D7D2 /* View */,
+			);
+			path = AddHabit;
+			sourceTree = "<group>";
+		};
+		CE986E3F28F565170099D7D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E4028F565170099D7D2 /* AddViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE986E4128F565170099D7D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE986E4228F565170099D7D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E4328F565170099D7D2 /* AddView.swift */,
+				CE986E4428F565170099D7D2 /* AddHabitViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE986E4528F565180099D7D2 /* HabitList */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E4628F565180099D7D2 /* ViewModel */,
+				CE986E4828F565180099D7D2 /* Model */,
+				CE986E4A28F565180099D7D2 /* View */,
+			);
+			path = HabitList;
+			sourceTree = "<group>";
+		};
+		CE986E4628F565180099D7D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E4728F565180099D7D2 /* HabitListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE986E4828F565180099D7D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E4928F565180099D7D2 /* FirebaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE986E4A28F565180099D7D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E4B28F565180099D7D2 /* ViewController.swift */,
+				CE6392A5280AF93900891278 /* HabitTableViewCell.swift */,
+				CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */,
+				CE986E4C28F565180099D7D2 /* Extension */,
+				CE986E5E28F56AAB0099D7D2 /* HabitListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE986E4C28F565180099D7D2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE986E4D28F565180099D7D2 /* HabitListExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,16 +383,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE639296280AF19400891278 /* ViewController.swift in Sources */,
-				CE780B5328132E6A00506C2E /* AddHabitViewController.swift in Sources */,
 				CE639292280AF19400891278 /* AppDelegate.swift in Sources */,
+				CE986E5128F565180099D7D2 /* ViewBuilder.swift in Sources */,
+				CE986E5428F565180099D7D2 /* AuthViewController.swift in Sources */,
 				CE6392A6280AF93900891278 /* HabitTableViewCell.swift in Sources */,
-				CE3AB46628A1390D006416A9 /* AuthViewController.swift in Sources */,
-				CE3AB460289A8FA7006416A9 /* FirebaseModel.swift in Sources */,
-				CE8B75F828D08C44003CFDDB /* NewTableViewCell.swift in Sources */,
+				CE986E5628F565180099D7D2 /* AddViewModel.swift in Sources */,
+				CE986E5B28F565180099D7D2 /* ViewController.swift in Sources */,
+				CE986E5828F565180099D7D2 /* AddHabitViewController.swift in Sources */,
+				CE986E5728F565180099D7D2 /* AddView.swift in Sources */,
+				CE986E5328F565180099D7D2 /* User.swift in Sources */,
+				CE986E5F28F56AAB0099D7D2 /* HabitListView.swift in Sources */,
 				CE639294280AF19400891278 /* SceneDelegate.swift in Sources */,
-				CE3AB45E289A8B5F006416A9 /* FireBaseServices.swift in Sources */,
-				CE3AB462289A945F006416A9 /* User.swift in Sources */,
+				CE986E5A28F565180099D7D2 /* FirebaseModel.swift in Sources */,
+				CE986E4F28F565180099D7D2 /* FirebaseAuthServices.swift in Sources */,
+				CE986E5228F565180099D7D2 /* AuthViewModel.swift in Sources */,
+				CE986E5528F565180099D7D2 /* AuthView.swift in Sources */,
+				CE986E5C28F565180099D7D2 /* HabitListExtension.swift in Sources */,
+				CE986E5928F565180099D7D2 /* HabitListViewModel.swift in Sources */,
+				CE986E5028F565180099D7D2 /* FireBaseDatabaseServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

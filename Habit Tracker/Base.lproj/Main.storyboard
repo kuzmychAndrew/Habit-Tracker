@@ -39,7 +39,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="USO-2e-icF">
                             <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="p5n-7G-2bf" kind="show" id="0LJ-Nq-WHf"/>
+                                <segue destination="p5n-7G-2bf" kind="show" identifier="moveToAdd" id="0LJ-Nq-WHf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,49 +55,13 @@
                     <view key="view" contentMode="scaleToFill" id="2Gv-iB-53E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Назва" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppq-hl-JY8">
-                                <rect key="frame" x="20" y="143" width="56" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Habit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HMa-MB-UuH">
-                                <rect key="frame" x="20" y="187" width="367" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="H5K-L5-YiJ"/>
-                                </constraints>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHE-uW-HOx">
-                                <rect key="frame" x="176" y="549" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="addHabit:" destination="p5n-7G-2bf" eventType="touchUpInside" id="phV-YV-mIB"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wnw-7O-Zc9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Ppq-hl-JY8" firstAttribute="leading" secondItem="wnw-7O-Zc9" secondAttribute="leading" constant="20" id="AgE-4q-dLd"/>
-                            <constraint firstAttribute="trailing" secondItem="HMa-MB-UuH" secondAttribute="trailing" constant="27" id="CZM-Nv-OHH"/>
-                            <constraint firstItem="Ppq-hl-JY8" firstAttribute="leading" secondItem="2Gv-iB-53E" secondAttribute="leading" constant="20" id="TFS-GR-NDY"/>
-                            <constraint firstItem="HMa-MB-UuH" firstAttribute="top" secondItem="Ppq-hl-JY8" secondAttribute="bottom" constant="20" id="Zmm-WZ-bQj"/>
-                            <constraint firstItem="HMa-MB-UuH" firstAttribute="leading" secondItem="wnw-7O-Zc9" secondAttribute="leading" constant="20" id="mQe-S8-qvf"/>
-                            <constraint firstItem="wnw-7O-Zc9" firstAttribute="bottom" secondItem="HMa-MB-UuH" secondAttribute="bottom" constant="592" id="uZm-kp-1Rh"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="vh9-ZK-a5W"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="habitTxtFld" destination="HMa-MB-UuH" id="T46-uQ-92k"/>
-                        <outlet property="nameHabitLbl" destination="Ppq-hl-JY8" id="g4c-Pj-dV4"/>
-                        <outlet property="savaBtn" destination="bHE-uW-HOx" id="YnB-ZA-U5e"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showMain" id="QJZ-av-PiV"/>
                     </connections>
                 </viewController>
@@ -127,7 +91,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QJZ-av-PiV"/>
+        <segue reference="Jcu-8e-9gg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
