@@ -771,12 +771,16 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.1.0)
+  - SwiftGen (6.5.1)
+  - SwiftLint (0.47.0)
 
 DEPENDENCIES:
   - Firebase/Firestore
   - FirebaseAnalytics
   - FirebaseAuth
   - FirebaseDatabase
+  - SwiftGen
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -801,6 +805,8 @@ SPEC REPOS:
     - Libuv-gRPC
     - nanopb
     - PromisesObjC
+    - SwiftGen
+    - SwiftLint
 
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
@@ -824,7 +830,9 @@ SPEC CHECKSUMS:
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
+  SwiftLint: d41cc46a2ae58ac6d9f26954bc89f1d72e71fdef
 
-PODFILE CHECKSUM: 1ce755290f51e98fcccbbe867b9526b926fc0981
+PODFILE CHECKSUM: 3715f8cdce194537b6a239cfd5bdfc0d38699c25
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

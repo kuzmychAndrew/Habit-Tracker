@@ -15,6 +15,8 @@ pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'Firebase/Firestore'
 pod 'FirebaseDatabase'
-
+pod 'SwiftLint'
+pod 'SwiftGen' 
+pod 'SwiftGRPC'
 
 end

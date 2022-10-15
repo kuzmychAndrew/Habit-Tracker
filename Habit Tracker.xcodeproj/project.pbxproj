@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2FBB1967C2FBA09DEDB0B56D /* Pods_Habit_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDE3D0BBA0DE37772437ED2 /* Pods_Habit_Tracker.framework */; };
+		CE06B7F128F94DFF00794EA9 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = CE06B7F028F94DFF00794EA9 /* swiftgen.yml */; };
 		CE639292280AF19400891278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE639291280AF19400891278 /* AppDelegate.swift */; };
 		CE639294280AF19400891278 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE639293280AF19400891278 /* SceneDelegate.swift */; };
 		CE639299280AF19400891278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE639297280AF19400891278 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		CE63929E280AF19600891278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE63929C280AF19600891278 /* LaunchScreen.storyboard */; };
 		CE6392A6280AF93900891278 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6392A5280AF93900891278 /* HabitTableViewCell.swift */; };
 		CE780B552819A54D00506C2E /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = CE780B542819A54D00506C2E /* PodFile */; };
-		CE8B75F928D08C44003CFDDB /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */; };
 		CE94039D2862240B00CE1EE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE94039C2862240B00CE1EE0 /* GoogleService-Info.plist */; };
 		CE986E4F28F565180099D7D2 /* FirebaseAuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3228F565170099D7D2 /* FirebaseAuthServices.swift */; };
 		CE986E5028F565180099D7D2 /* FireBaseDatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986E3328F565170099D7D2 /* FireBaseDatabaseServices.swift */; };
@@ -38,6 +38,7 @@
 		7CDE3D0BBA0DE37772437ED2 /* Pods_Habit_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habit_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3132AFAF835D8CE46BD9FD0 /* Pods-Habit Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habit Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Habit Tracker/Pods-Habit Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		B3A420504080345B414F3855 /* Pods-Habit Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habit Tracker.release.xcconfig"; path = "Target Support Files/Pods-Habit Tracker/Pods-Habit Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		CE06B7F028F94DFF00794EA9 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		CE63928E280AF19400891278 /* Habit Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE639291280AF19400891278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE639293280AF19400891278 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		CE63929F280AF19600891278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6392A5280AF93900891278 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		CE780B542819A54D00506C2E /* PodFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
-		CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
 		CE94039C2862240B00CE1EE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CE986E3228F565170099D7D2 /* FirebaseAuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthServices.swift; sourceTree = "<group>"; };
 		CE986E3328F565170099D7D2 /* FireBaseDatabaseServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseDatabaseServices.swift; sourceTree = "<group>"; };
@@ -116,6 +116,7 @@
 		CE639290280AF19400891278 /* Habit Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				CE06B7F028F94DFF00794EA9 /* swiftgen.yml */,
 				CE639291280AF19400891278 /* AppDelegate.swift */,
 				CE639293280AF19400891278 /* SceneDelegate.swift */,
 				CE986E3E28F565170099D7D2 /* AddHabit */,
@@ -250,7 +251,6 @@
 			children = (
 				CE986E4B28F565180099D7D2 /* ViewController.swift */,
 				CE6392A5280AF93900891278 /* HabitTableViewCell.swift */,
-				CE8B75F728D08C44003CFDDB /* NewTableViewCell.xib */,
 				CE986E4C28F565180099D7D2 /* Extension */,
 				CE986E5E28F56AAB0099D7D2 /* HabitListView.swift */,
 			);
@@ -273,6 +273,7 @@
 			buildConfigurationList = CE6392A2280AF19600891278 /* Build configuration list for PBXNativeTarget "Habit Tracker" */;
 			buildPhases = (
 				4D06A66E347E58972E6997A5 /* [CP] Check Pods Manifest.lock */,
+				CE986E6028F6CE4E0099D7D2 /* ShellScript */,
 				CE63928A280AF19400891278 /* Sources */,
 				CE63928B280AF19400891278 /* Frameworks */,
 				CE63928C280AF19400891278 /* Resources */,
@@ -327,10 +328,10 @@
 			files = (
 				CE63929E280AF19600891278 /* LaunchScreen.storyboard in Resources */,
 				CE63929B280AF19600891278 /* Assets.xcassets in Resources */,
-				CE8B75F928D08C44003CFDDB /* NewTableViewCell.xib in Resources */,
 				CE94039D2862240B00CE1EE0 /* GoogleService-Info.plist in Resources */,
 				CE780B552819A54D00506C2E /* PodFile in Resources */,
 				CE639299280AF19400891278 /* Main.storyboard in Resources */,
+				CE06B7F128F94DFF00794EA9 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +376,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Habit Tracker/Pods-Habit Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CE986E6028F6CE4E0099D7D2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

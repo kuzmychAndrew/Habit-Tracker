@@ -7,28 +7,27 @@
 
 import UIKit
 
-final class HabitListView: UIView{
-    
+final class HabitListView: UIView {
+
     var tableView: UITableView!
     override init(frame: CGRect) {
-           super.init(frame: frame)
-           self.backgroundColor = .white
-           createSubViews()
-        }
-    
+        super.init(frame: frame)
+        self.backgroundColor = .white
+        createSubViews()
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func createSubViews(){
+
+    func createSubViews() {
         let view = UIView(frame: .zero)
         view.backgroundColor = .black
-        
+
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(tableView)
-        
-        
+
         NSLayoutConstraint.activate([
             self.safeAreaLayoutGuide.topAnchor.constraint(equalTo: tableView.topAnchor),
             self.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
@@ -36,9 +35,6 @@ final class HabitListView: UIView{
             self.trailingAnchor.constraint(equalTo: tableView.trailingAnchor)
         ])
         self.tableView = tableView
-        
-        
-        
-        
+
     }
 }

@@ -51,7 +51,7 @@
         <!--Add Habit View Controller-->
         <scene sceneID="sX0-9V-XQ7">
             <objects>
-                <viewController id="p5n-7G-2bf" customClass="AddHabitViewController" customModule="Habit_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddContoller" id="p5n-7G-2bf" customClass="AddHabitViewController" customModule="Habit_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Gv-iB-53E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,6 +93,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Jcu-8e-9gg"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
