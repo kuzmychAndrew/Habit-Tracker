@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Habit_Tracker
+
+  Created by Андрій Кузьмич on 17.10.2022.
+  
+*/
+
+//AddHabitView
+"AddHabit.NameOfHabit.title" = "Habit title";
+"AddHabit.HabitTxt.title" = "Enter new habit";
+"AddHabit.SaveButton.title" = "Save";
+
+//AuthView
+
+"AuthView.EmailTxtFld.title" = "Email";
+"AuthView.PasswordTxtFld.title" = "Password";
+"AuthView.LoginBtn.title" = "Login";
+"AuthView.SignUpBtn.title" = "Sign up";
+
+
+
+
